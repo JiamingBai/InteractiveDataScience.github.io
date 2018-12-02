@@ -72,6 +72,13 @@
       <div class="row">
         <div class="col-lg-11 col-md-11 mx-auto">
           <div style="width:200px;">
+            <form>
+              Input age:
+              <br>
+                <input type="text" id="ageID" value ="">
+              <br>
+              <button onclick="getAge">Get Age</button>
+            </form>
             <select id = "animalTypeList" onchange="getAnimalType();">
               <option value="0">Select animal type:</option>
               <option value="Cat">Cat</option>
@@ -88,10 +95,11 @@
               <option value="Other">Other</option>
             </select>
 
-            <p>
+            <p id="boo"></p>
               <script>
                 var animalType;
                 var colorType;
+                var age;
                 function getAnimalType(){
                   animalType = document.getElementById("animalTypeList").value;
                   document.write(animalType);
@@ -100,8 +108,13 @@
                   colorType = document.getElementById("colorTypeList").value;
                   document.write(colorType);
                 }
+                function getAge(){
+                  var y = document.getElementById("boo");
+                  age = document.getElementById("ageID").value;
+                  y.innerHTML = age;
+                }
               </script>
-            </p>
+
             <p>prediction</p>
           </div>
         </div>
