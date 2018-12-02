@@ -108,12 +108,29 @@
               <option value="Neutered">Neutered</option>
               <option value="Unknown">Unknown</option>
             </select>
-            <p><button onclick="prediction()">make predict!</button></p>
+            <p><button id="clickme">make predict!</button></p>
             <input type="button" name="runmyscript" value=" Run Python code!" 
-            onclick="<?
-                $python = `python test.py`;
-                echo $python;
-             ?>">
+            onclick="runPython()">
+             <script>
+                $(function() 
+                {   
+                  $('#clickme').click(function(){
+                    $.ajax({
+                        url: "test.py",
+                        type: "post",
+                        datatype: "json",
+                        data: {
+                            'key1': 'first Argument',
+                            'key2': 'second Argument' 
+                            //Arguments you want to send to your .py
+                        },
+                        success: function(response){
+                            alert(response.message);
+                            alert(response.keys)
+                        }
+                    });
+                  }
+            </script>
               <script>
                 var animalType;
                 var colorType;
