@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 800;
+  font-weight: 300;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -287,6 +287,7 @@ header.masthead .post-heading .meta a {
   font-size: 25px;
   margin-top: 30px;
   margin-bottom: 10px;
+  color: #E57920;
 }
 
 .post-preview > a > .post-subtitle {
@@ -313,7 +314,7 @@ header.masthead .post-heading .meta a {
 
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 36px;
+    font-size: 25px;
   }
 }
 
