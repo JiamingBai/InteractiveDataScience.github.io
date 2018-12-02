@@ -111,6 +111,11 @@
             <p><button id="clickme">make predict!</button></p>
             <input type="button" name="runmyscript" value=" Run Python code" 
             onclick="runPython()">
+            
+
+            <form action="/forward/" method="post">
+                <button name="forwardBtn" type="submit">Forward</button>
+            </form>
              <script>
                 $(function() 
                 {   
@@ -169,8 +174,9 @@
 
                 // }
                 function runPython(){
-                  var result = '<?php exec('python test.py', $output); echo $output; ?>'
-                  y.innerHTML = result
+                  var result = exec("python test.py", $output); 
+                  echo $output;
+                  y.innerHTML = result;
                 }
               </script>
           </div>
