@@ -80,16 +80,29 @@
               <option value="Other">Other</option>
             </select>
 
+            <select id = "colorTypeList" onchange="getColorType();">
+              <option value="0">Select animal color:</option>
+              <option value="Orange">Orange</option>
+              <option value="Blue">Blue</option>
+              <option value="Black">Black</option>
+              <option value="Other">Other</option>
+            </select>
+
             <p>
               <script>
+                var animalType;
+                var colorType;
                 function getAnimalType(){
-                  var animalType = document.getElementById("animalTypeList").value;
-                  //document.getElementById("fooHolder").innerHTML = foo.toString();
+                  animalType = document.getElementById("animalTypeList").value;
                   document.write(animalType);
+                }
+                function getColorType(){
+                  colorType = document.getElementById("colorTypeList").value;
+                  document.write(colorType);
                 }
               </script>
             </p>
-            <p>predictio</p>
+            <p>prediction</p>
           </div>
         </div>
       </div>
