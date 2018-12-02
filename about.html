@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Clean Blog - Start Bootstrap Theme</title>
+    <title>Data-Quality-05839-Final-Project</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand" href="index.html">Data Analysis</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -39,13 +39,13 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.html">About This Dataset</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Sample Post</a>
+              <a class="nav-link" href="post.html">Data Quality</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html">Prediction</a>
             </li>
           </ul>
         </div>
@@ -57,10 +57,10 @@
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="col-lg-11 col-md-11 mx-auto">
             <div class="page-heading">
-              <h1>About Me</h1>
-              <span class="subheading">This is what I do.</span>
+              <h1>About this data set</h1>
+              <span class="subheading">The dataset mainly records the outcome of the accepted animals and general information about them such as breed, age and color.</span>
             </div>
           </div>
         </div>
@@ -70,12 +70,44 @@
     <!-- Main Content -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+        <div class="col-lg-11 col-md-11 mx-auto">
+          <h2 class="post-title">
+            Data Cleaning:
+          </h2>
+          <p>First, we used python scripts to separate column “sex upon outcome” to columns of sex(female,male) and outcome(neutered,spayed,intact), and separate rows with unknown “sex upon outcome” will have unknown for both sex and outcome.</p>
+          <p>Second, we found there are duplicated animal_ids, thus we used Microsoft Excel to remove duplicate ones and only keep the first occurance.</p>
+          <p>In the original dataset, the breed of the animal are carefully documented and some of them are too detailed that we will end up with a lot of categories for breed. Therefore, we created a new column called dominant breed to narrow down the number of types of breeds in the data.</p>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-lg-11 col-md-11 mx-auto">
+          <h2 class="post-title">
+            Where did this data come from?
+          </h2>
+          <p>This dataset was found on Kaggle and is publicly available for download<a href="https://www.kaggle.com/aaronschlegel/austin-animal-center-shelter-outcomes-and#aac_shelter_cat_outcome_eng.csv">here</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-11 col-md-11 mx-auto">
+          <h2 class="post-title">
+            Outcome types and subtypes
+          </h2>
+          <p>
+            <ul><b>Adoption:</b> the animal was adopted to a home</ul>
+            <ul><b>Barn Adoption:</b> the animal was adopted to live in a barn</ul>
+            <ul><b>Offsite Missing:</b> the animal went missing for unknown reasons at a partner offsite location</ul>
+            <ul><b>In-Foster Missing:</b> the animal is missing after being placed in a foster home</ul>
+            <ul><b>In-Kennel Missing:</b> the animal is missing after being transferred to a kennel facility</ul>
+            <ul><b>Possible Theft:</b>  Although not confirmed, the animal went missing as a result of theft from facility</ul>
+            <ul><b>Barn Transfer:</b> The animal was transferred to a facility for adoption into a barn environment</ul>
+            <ul><b>SNR:</b> SNR refers to the city of Austin's Shelter-Neuter-Release program. I believe the outcome is representative of the animal being released.</ul>
+          </p>
+        </div>
+      </div>
+
     </div>
 
     <hr>
