@@ -74,17 +74,19 @@
           <div style="width:200px;">
             <select id = "animalTypeList">
               <option value="0">Select animal type:</option>
-              <option value="1">Cat</option>
-              <option value="2">Dog</option>
-              <option value="3">Other</option>
+              <option value="Cat">Cat</option>
+              <option value="Dog">Dog</option>
+
+              <option value="Other">Other</option>
             </select>
-            <script>
-              function getSelectValue(){
+
+            <p>
+              <script type="text/javascript">
                 var animalType = document.getElementById("animalTypeList").value;
-                console.log(animalType)
-              }
-            </script>
-            <p><script type="text/javascript">document.write(animalType)</script></p>
+                //document.getElementById("fooHolder").innerHTML = foo.toString();
+                document.write(animalType)
+              </script>
+            </p>
             <p>prediction</p>
           </div>
         </div>
