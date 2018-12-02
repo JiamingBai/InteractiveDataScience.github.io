@@ -95,16 +95,16 @@
                 var animalType;
                 var colorType;
                 var age;
+                var y = document.getElementById("boo");
                 function getAnimalType(){
                   animalType = document.getElementById("animalTypeList").value;
-                  document.write(animalType);
+                  y.innerHTML = animalType;
                 }
                 function getColorType(){
                   colorType = document.getElementById("colorTypeList").value;
-                  document.write(colorType);
+                  y.innerHTML = colorType;
                 }
                 function getAge(){
-                  var y = document.getElementById("boo");
                   age = document.getElementById("ageID").value;
                   y.innerHTML = age;
                 }
