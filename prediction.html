@@ -109,8 +109,11 @@
               <option value="Unknown">Unknown</option>
             </select>
             <p><button onclick="prediction()">make predict!</button></p>
-<!--             <input type="button" name="runmyscript" value=" Run Python code " 
-            onClick="<? exec('python test.py', $output); ?>"> -->
+            <input type="button" name="runmyscript" value=" Run Python code " 
+            onClick="<?php
+                $python = `python test.py`;
+                echo $python;
+             ?>">
               <script>
                 var animalType;
                 var colorType;
@@ -136,16 +139,16 @@
                   sexOutcome = document.getElementById("sexOutcomeTypeList").value;
                   y.innerHTML = sexOutcome;
                 }
-                function prediction(){
-                  // $result = system("test.py");
-                  // exec('python test.py', $output);
-                  
-                  var result = '<?php exec('python test.py', $output); echo $output; ?>'
-                  y.innerHTML = result
-                  // exec('python test.py', $output);
-                  // y.innerHTML = $output;
+                // function prediction(){
+                //   // $result = system("test.py");
+                //   // exec('python test.py', $output);
 
-                }
+                //   var result = '<?php exec('python test.py', $output); echo $output; ?>'
+                //   y.innerHTML = result
+                //   // exec('python test.py', $output);
+                //   // y.innerHTML = $output;
+
+                // }
               </script>
           </div>
         </div>
