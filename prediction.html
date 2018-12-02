@@ -71,7 +71,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-11 col-md-11 mx-auto">
-          <div style="width:200px;">
+         <!--  <div style="width:200px;"> -->
+          <div>
               Input age:
               <input type="text" id="ageID" value ="">
               <button onclick="getAge()">Get Age</button>
@@ -134,9 +135,8 @@
                   y.innerHTML = sexOutcome;
                 }
                 function prediction(){
-                  <?php exec('python test.py', $output);
-                  echo "Result is: ".$output;
-                  ?>
+                  exec('python test.py', $output);
+                  y.innerHTML = "Result is: ".$output;
                   // exec('python test.py', $output);
                   // y.innerHTML = $output;
                 }
