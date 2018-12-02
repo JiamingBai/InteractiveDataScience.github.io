@@ -179,6 +179,24 @@
                   y.innerHTML = result;
                 }
               </script>
+          <script type=text/javascript>
+                  $(function() {
+                    $('a#test').bind('click', function() {
+                      $.getJSON('/background_process_test',
+                          function(data) {
+                        //do nothing
+                      });
+                      return false;
+                    });
+                  });
+          </script>
+          <div class='container'>
+              <h3>Test</h3>
+                  <form>
+                      <a href=# id=test><button class='btn btn-default'>Test</button></a>
+                  </form>
+
+          </div>
           </div>
         </div>
       </div>
