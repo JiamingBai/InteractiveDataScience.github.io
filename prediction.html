@@ -68,13 +68,25 @@
     </header>
 
     <!-- Main Content -->
-    <div style="width:200px;">
-      <select>
-        <option value="0">Select animal type:</option>
-        <option value="1">Cat</option>
-        <option value="2">Dog</option>
-        <option value="3">Other</option>
-      </select>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-11 col-md-11 mx-auto">
+          <div style="width:200px;">
+            <select id = "list">
+              <option value="0">Select animal type:</option>
+              <option value="1">Cat</option>
+              <option value="2">Dog</option>
+              <option value="3">Other</option>
+            </select>
+            <script>
+              function getSelectValue(){
+                var animalType = document.getElementById("animalTypeList").value;
+                console.log(animalType)
+                }
+            </script>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
