@@ -134,8 +134,11 @@
                   y.innerHTML = sexOutcome;
                 }
                 function prediction(){
-                  exec('python test.py', $output);
-                  y.innerHTML = $output;
+                  <?php exec('python test.py', $output);
+                  echo "Result is: ".$output;
+                  ?>
+                  // exec('python test.py', $output);
+                  // y.innerHTML = $output;
                 }
               </script>
           </div>
