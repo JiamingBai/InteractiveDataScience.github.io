@@ -72,22 +72,24 @@
       <div class="row">
         <div class="col-lg-11 col-md-11 mx-auto">
           <div style="width:200px;">
-            <select id = "animalTypeList">
+            <select id = "animalTypeList" onchange="getAnimalType();">
               <option value="0">Select animal type:</option>
               <option value="Cat">Cat</option>
               <option value="Dog">Dog</option>
-
+              <option value="Bird">Bird</option>
               <option value="Other">Other</option>
             </select>
 
             <p>
-              <script type="text/javascript">
-                var animalType = document.getElementById("animalTypeList").value;
-                //document.getElementById("fooHolder").innerHTML = foo.toString();
-                document.write(animalType)
+              <script>
+                function getAnimalType(){
+                  var animalType = document.getElementById("animalTypeList").value;
+                  //document.getElementById("fooHolder").innerHTML = foo.toString();
+                  document.write(animalType);
+                }
               </script>
             </p>
-            <p>prediction</p>
+            <p>predictio</p>
           </div>
         </div>
       </div>
