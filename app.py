@@ -3,10 +3,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template('predict.html')
+    return render_template('prediction.html')
 
 @app.route("/forward/", methods=['POST'])
 def predict():
     #Moving forward code
     forward_message = "Testing..."
-    return render_template('predict.html', message=forward_message);
+    return render_template('prediction.html', message=forward_message);
