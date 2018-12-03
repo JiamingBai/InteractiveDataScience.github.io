@@ -73,6 +73,15 @@
         <div class="col-lg-11 col-md-11 mx-auto">
          <!--  <div style="width:200px;"> -->
           <div>
+            <h3>
+              We used a decision tree classifier to train our model because first, a decision tree classifier is very straightforward and intuitive for most people. Each non-leaf node represents a splitting criterion and each leaf node represents a classification. Second, a decision tree classifier implicitly performs feature selection, meaning the features that do not give enough information gain will not be used. 
+            </h3>
+            <h3>
+              In terms of data preparation, we first removed fields that are irrelevant to the prediction question such as animal_id and datetime. Then since the age field is given as number of years, months, weeks and days. We wrote a simply function to transfer every animal’s age in terms of day so that all age fields have the same unit. Lastly, we apply a label encoder (sklearn) to all the categorical columns.  
+            </h3>
+            <h3>
+              To train the model, we simply used the decision tree classifier in the scikit learn library. Since we don’t want to train the model every time,the pre-trained decision tree classifier is saved as a file and during prediction, the same classifier is loaded for prediction.  
+            </h3>
             <h2>Click <a href="https://aqueous-taiga-52599.herokuapp.com/">here</a> to make a prediction.</h2>
           </div>
         </div>
